@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-image: url('photo/client_bg.jpeg')
+}
+.header {
+    font: Roboto;
+    font-size: 34px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 150px;
+    color:#FFFFFF;
+}
+
+.sub-header {
+    font: Roboto ;
+    font-size: 22px;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #C76F00;
+    
+}
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #F1EBE6F2;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+.content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-text {
+    text-align: left;
+    width: 100%;
+}
+
+.qrcode-wrapper {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 300px;
+    width: 100%;
+}
+
+#qrcode {
+    max-width: 100%;
+    margin-left: 30px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 10px;
+}

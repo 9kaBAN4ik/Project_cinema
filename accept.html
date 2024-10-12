@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование билетов</title>
+    <link rel="stylesheet" href="css/accept.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            ВЫ ВЫБРАЛИ БИЛЕТЫ:
+        </div>
+        <div class="content">
+            <p>На фильм: <span id="movie-title"></span></p>
+            <p>Места: <span id="selected-seats"></span></p>
+            <p>В зале: <span id="movie-hall"></span></p>
+            <p>Начало сеанса: <span id="movie-time"></span></p>
+            <p>Стоимость: <span id="total-cost"></span></p>
+            <a href="qrcode.html" class="button">ПОЛУЧИТЬ КОД БРОНИРОВАНИЯ</a>
+        </div>
+        <div class="footer">
+            <p>После оплаты билет будет доступен в этом окне, а также придёт вам на почту. Покажите QR-код нашему контролёру у входа в зал. Приятного просмотра!</p>
+        </div>
+    </div>
+    <script src="scripts/accept.js"></script>
+</body>
+</html>

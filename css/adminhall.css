@@ -1,0 +1,520 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('photo/admin_bg.jpeg');
+}
+
+header {
+    width: 100%;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 400px;
+}
+
+.header-content h1 {
+    font-size: 24px; 
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.header-content p {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #ccc;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.hall-management, 
+.hall-configuration, 
+.price-configuration, 
+.schedule-configuration, 
+.sales-configuration {
+    background-color: #EAE9EBF2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 800px;
+
+    position: relative;
+}
+
+.collapsed {
+    background-color: #63536C;
+}
+
+.hidden {
+    display: none;
+}
+
+.delete-hall {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-hall:hover {
+    background-color: #d32f2f;
+}
+
+.section-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #63536C;
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    height: 50px;
+    width: 100%; 
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+.section-content {
+    padding: 20px;
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+}
+
+#toggleSection, 
+#toggleConfigSection, 
+#togglePriceConfigSection, 
+#toggleScheduleConfigSection,   
+#toggleSalesSection {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hall-list p, 
+.select-hall label, 
+.seat-config label, 
+.price-config label {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.hall-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hall-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.create-hall, 
+.config-buttons button, 
+.add-movie {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.popup {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.create-hall:hover, 
+.config-buttons button:hover, 
+.add-movie:hover {
+    background-color: #0056b3;
+}
+
+.hall-button:hover {
+    background-color: #0056b3;
+}
+
+.hall-buttons-container {
+    display: flex;
+    gap: 10px;
+}
+
+.hall-button {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hall-button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.row-seat-inputs, 
+.price-inputs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.row-seat-inputs input, 
+.price-inputs input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.seat-types {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.seat-example {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.regular-seat {
+    background-color: #ccc;
+}
+
+.vip-seat {
+    background-color: aqua;
+}
+
+.blocked-seat {
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.seats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.seat {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.seat.standart {
+    background-color: #C4C4C4;
+    border: 1px solid #000000;
+}
+
+.seat.vip {
+    background-color: aqua;
+    border: 1px solid #000000;
+}
+
+.seat.disabled {
+    background-color: white;
+    border: 1px solid #000000;
+}
+
+.config-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.schedule-configuration {
+    width: 800px;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.movie-item {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+.movie-item img {
+    width: 50px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.movie-details {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.movie-title {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.movie-duration {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.delete-movie {
+    background: none;
+    border: none;
+    color: #ff0000;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2em;
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.hall-schedule {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.hall-schedule h3 {
+    margin-bottom: 10px;
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    height: 75px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+.seance {
+    position: absolute;
+    background-color: #90ee90;
+    border: 1px solid #006400;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #006400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.timeline .time-slot {
+    position: relative;
+    flex-shrink: 0;
+    width: 70px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px dashed #ccc;
+}
+
+.timeline .time-slot:last-child {
+    border-right: none;
+}
+
+.timeline .time-slot .seance {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4caf50; /* Цвет сеанса */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.timeline .time-slot .seance[data-duration="90"] {
+    background-color: #ff9800;
+}
+
+.timeline .time-slot .seance[data-duration="95"] {
+    background-color: #03a9f4;
+}
+
+.timeline .time-slot .seance[data-duration="100"] {
+    background-color: #9c27b0;
+}
+
+.timeline .time-slot .seance[data-duration="120"] {
+    background-color: #4caf50;
+}
+
+.timeline .time-slot .seance[data-duration="130"] {
+    background-color: #4caf50;
+}
+
+.timeline .time-slot .time-label {
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    color: #000;
+}
+
+.time-slots {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.movie-item {
+    cursor: grab;
+}
+
+.movie-item.dragging {
+    cursor: grabbing;
+    opacity: 0.5;
+}
+
+.config-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.sales-configuration .section-content #toggleSalesButton {
+    background-color: #00b4c4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.config-buttons button {
+    background-color: #00bfa5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.section {
+    border: 1px solid #ccc;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #e0d4e4; /* Обновленный цвет фона */
+    width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Для позиционирования кругов и линий */
+}

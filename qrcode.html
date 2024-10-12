@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электронный билет</title>
+    <link rel="stylesheet" href="css/qrcode.css">
+    <script src="scripts/QRCreator.js" defer></script>
+    <script src="scripts/sample.js" defer></script>
+</head>
+    <div class="header">
+            ИДЁМ В КИНО
+        </div>
+<body>
+    <div class="container">
+        
+        <div class="sub-header">
+            ЭЛЕКТРОННЫЙ БИЛЕТ
+        </div>
+        <div class="content">
+            <p class="left-text">На фильм: <strong><span id="movie-title"></span></strong></p>
+            <p class="left-text">Места: <strong><span id="selected-seats"></span></strong></p>
+            <p class="left-text">В зале: <strong><span id="movie-hall"></span></strong></p>
+            <p class="left-text">Начало сеанса: <strong><span id="movie-time"></span></strong></p>
+            <p class="left-text"><strong><span id="ticket-price"></span></strong></p>
+            <p class="left-text"><strong><span id="ticket-date"></span></strong></p>
+            <div class="qrcode-wrapper">
+                <div id="qrcode"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Покажите QR-код нашему контролёру для подтверждения бронирования. Приятного просмотра!</p>
+        </div>
+    </div>
+</body>
+</html>

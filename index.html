@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Идём в кино</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        <h1>Идём в кино</h1>
+        <button id="loginButton" class="login-button">Войти</button>
+    </header>
+    <main>
+        <div class="date-selector">
+            <button class="prev-week">&lt;</button>
+            <ul class="weekdays">
+                <li>Пн<br>31</li>
+                <li>Вт<br>1</li>
+                <li>Ср<br>2</li>
+                <li>Чт<br>3</li>
+                <li>Пт<br>4</li>
+                <li>Сб<br>5</li>
+                <li>Вс<br>6</li>
+            </ul>
+            <button class="next-week">&gt;</button>
+        </div>
+        <section class="movie-list"></section>
+        <div id="seats-container"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Идём в кино</p>
+    </footer>
+    <script type="module" src="scripts/index.js"></script>
+</body>
+</html>

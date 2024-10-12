@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резервирование мест</title>
+    <link rel="stylesheet" href="css/hall.css">
+</head>
+<body>
+    <header>
+        <h1>ИДЁМ В КИНО</h1>
+    </header>
+    <main>
+        <div class="reservation-container">
+            <h2 id="movie-title">Название фильма</h2>
+            <p>Начало сеанса: <span id="movie-time"></span></p>
+            <span id="movie-hall"></span>
+            <div class="seating-chart">
+                <div class="screen">
+                    <svg width="400" height="50">
+                        <path d="M 10 40 Q 200 10 390 40" fill="none" stroke="#fff" stroke-width="14"/>
+                        <path d="M 10 40 Q 200 10 390 40" fill="none" stroke="#1c1c1c" stroke-width="12"/>
+                        <text x="200" y="30" text-anchor="middle" fill="#ccc" font-size="16">экран</text>
+                    </svg>
+                </div>
+                <div class="seats" id="seats-container">
+                </div>
+                <div class="legend">
+                    <div class="legend-column">
+                        <div class="legend-item"><span class="legend-seat available"></span> Свободно (250руб)</div>
+                        <div class="legend-item"><span class="legend-seat vip"></span> Свободно VIP (350руб)</div>
+                    </div>
+                    <div class="legend-column">
+                        <div class="legend-item"><span class="legend-seat reserved"></span> Занято</div>
+                        <div class="legend-item"><span class="legend-seat selected"></span> Выбрано</div>
+                    </div>
+                </div>
+            </div>
+            <button class="reserve-button" id="reserve-button">ЗАБРОНИРОВАТЬ</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 ИДЁМ В КИНО</p>
+    </footer>
+    <script type="module" src="scripts/hall.js"></script>
+</body>
+</html>
